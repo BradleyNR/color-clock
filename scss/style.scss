@@ -3,10 +3,16 @@ h2{
   padding: 0;
   color: #ffffff;
   font-family: "Comic Sans MS" , cursive, sans-serif;
-  display: inline;
 }
 
 body{
   display: flex;
   justify-content: center;
+}
+
+hr{
+  height: 3px;
+  background-color: #ffffff;
+  position: relative;
+  bottom: 100px;
 }

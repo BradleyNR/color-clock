@@ -10,7 +10,7 @@ function workingClock(){
   var currentMinute = currentTime.getMinutes();
   var currentSecond = currentTime.getSeconds();
   var hexCode = toHex(currentHour, currentMinute, currentSecond);   //assigns the value from the toHex function to a var with prior vars as arguments
-
+  var lineBottom = (currentSecond / 60) * 100;
   var time = ('0' + currentHour).slice(-2) + ':' + ('0' + currentMinute).slice(-2) + ':' + ('0' + currentSecond).slice(-2);  //creates a variable, adds 0, and removes it if 3 integers
 
   if (displayHex === false){
@@ -21,12 +21,15 @@ function workingClock(){
   // clock.textContent = time;                   //assigns the time to the content of clock in our HTML
 
   document.getElementById("body").style.backgroundColor = hexCode; //assigns the hex code as the background color of our element
+  document.getElementById("loading-bar").style.width = lineBottom + "%"; //assigns the hex code as the background color of our element
 
   console.log(time);
   console.log(hexCode);                                             //testing in console
+  console.log(lineBottom);
+
+
 
   setTimeout(workingClock, 100);
-
 }
 
 function toHex(hour, minute, second){

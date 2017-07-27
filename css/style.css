@@ -1,8 +1,12 @@
 h2 {
   font-size: 10vw;
-  text-align: center;
-  padding-top: 15vh;
+  padding: 0;
   color: #ffffff;
-  font-family: "Comic Sans MS" , cursive, sans-serif; }
+  font-family: "Comic Sans MS" , cursive, sans-serif;
+  display: inline; }
+
+body {
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */
